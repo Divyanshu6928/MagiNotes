@@ -131,7 +131,7 @@ export default function MenuBar({ editor }: MenuBarProps) {
         {options.slice(0, 3).map((option, index) => (
           <Toggle
             key={index}
-            pressed={option.preesed}
+            pressed={option.active}
             onPressedChange={option.onClick}
             className="h-9 min-w-9 rounded-lg text-white hover:bg-[#263247] data-[state=on]:bg-blue-600 data-[state=on]:text-white"
           >
@@ -147,7 +147,7 @@ export default function MenuBar({ editor }: MenuBarProps) {
         {options.slice(3, 6).map((option, index) => (
           <Toggle
             key={index}
-            pressed={option.preesed}
+            pressed={option.active}
             onPressedChange={option.onClick}
             className="h-9 min-w-9 rounded-lg text-white hover:bg-[#263247] data-[state=on]:bg-blue-600 data-[state=on]:text-white"
           >
@@ -163,7 +163,7 @@ export default function MenuBar({ editor }: MenuBarProps) {
         {options.slice(6, 9).map((option, index) => (
           <Toggle
             key={index}
-            pressed={option.preesed}
+            pressed={option.active}
             onPressedChange={option.onClick}
             className="h-9 min-w-9 rounded-lg text-white hover:bg-[#263247] data-[state=on]:bg-blue-600 data-[state=on]:text-white"
           >
@@ -179,7 +179,7 @@ export default function MenuBar({ editor }: MenuBarProps) {
         {options.slice(9).map((option, index) => (
           <Toggle
             key={index}
-            pressed={option.preesed}
+            pressed={option.active}
             onPressedChange={option.onClick}
             className="h-9 min-w-9 rounded-lg text-white hover:bg-[#263247] data-[state=on]:bg-blue-600 data-[state=on]:text-white"
           >
