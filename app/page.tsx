@@ -1,19 +1,40 @@
-import { Button } from "@/components/ui/button"
+"use client";
 
-export default function Page() {
+import TextEditor from "@/components/text-editor";
+import { useState } from "react";
+
+export default function Home() {
+  const [post, setPost] = useState("");
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <main className="min-h-screen bg-[#0b1014] text-white">
+      <div className="mx-auto w-full max-w-[1570px] px-6 py-10 lg:px-10">
+
+        {/* Header */}
+        <div className="mb-8 flex items-end justify-between">
+          <div>
+            <h1 className="text-5xl font-bold tracking-tight">
+              Notes<span className="text-blue-500">.</span>
+            </h1>
+
+            <p className="mt-2 text-lg text-zinc-400">
+              Write, format and organize your thoughts.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className="rounded-xl border border-blue-500 bg-transparent px-6 py-3 font-semibold text-white transition hover:bg-blue-500/10"
+          >
+            + New Note
+          </button>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+
+        <TextEditor
+          content={post}
+          onChange={setPost}
+        />
       </div>
-    </div>
-  )
+    </main>
+  );
 }
